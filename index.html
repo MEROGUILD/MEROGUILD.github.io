@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MERO GUILD</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+      $(document).ready(function() {
+        $('a[href^="#"]').on('click', function(event) {
+          event.preventDefault();
+          var target = $(this.getAttribute('href'));
+          if (target.length) {
+            $('html, body').animate({
+              scrollTop: target.offset().top
+            }, 1000);
+          }
+        });
+      });
+    </script>
+</head>
+<body>
+    <nav class="navbar">
+        <h1 class="logo">MERO GUILD</h1>
+        <ul class="nav-links">
+            <li><a href="#hero">ホーム</a></li>
+            <li><a href="#gaiyou">概要</a></li>
+            <li><a href="#sanka">参加</a></li>
+        </ul>
+    </nav>
+
+    <!-- メインコンテンツ -->
+    <section class="hero" id="hero">
+        <h2>MERO</h2>
+        <p>新しいBedWarsギルド</p>
+        <button class="dynamic-btn" onclick="window.open('https://discord.gg/mwZMKMbgUr')">サーバーに参加！</button>
+    </section>
+
+    <!-- ウィジェットセクション -->
+    <section class="widgets" id="gaiyou">
+        <div class="widget1">
+            <h3>ギルドメンバー募集中！</h3>
+            <p>新規ギルドメンバーを募集中です！</p>
+        </div>
+        <div class="widget1">
+            <h3>雑談が活発！</h3>
+            <p>マイクラPvPだけではなく雑談、VCも活発です！</p>
+        </div>
+        <div class="widget1">
+            <h3>複雑なルールが無い！</h3>
+            <p>特に複雑なルールなど設けていないので気楽に参加できます！</p>
+        </div>
+    </section>
+    <section class="sanka" id="sanka">
+        <h2>MEROギルドとは</h2>
+        <p>MEROギルドは2025年1月21日に新しく出来たばかりの、Hypixel BedWarsギルドです！<p>
+        </p>ぜひDiscordサーバーの参加お願いします！</p>
+        <br>
+        <button class="dynamic-btn" onclick="window.open('https://discord.gg/mwZMKMbgUr')">サーバーに参加！</button>
+    </section>
+    <!--footer-->
+    <footer>
+        &copy; 2025 MERO GUILD All rights reserved.
+    </footer>
+</body>
+</html>
