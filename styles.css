@@ -1,0 +1,196 @@
+/* styles.css */
+
+body {
+	margin: 0;
+	font-family: 'Arial', sans-serif;
+	background-image: url(image/mero2.png);
+	text-align: center;
+	background-attachment: fixed;
+	background-size: cover;
+	color: #FFFFFF;
+}
+
+h2 {
+	text-align: center;
+}
+
+/* ナビゲーション */
+.navbar {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 15px 20px;
+	background: rgba(0, 0, 0, 0.2);
+	backdrop-filter: blur(10px);
+}
+
+.logo {
+	font-size: 24px;
+	font-weight: bold;
+}
+
+.nav-links {
+	list-style: none;
+	display: flex;
+	gap: 20px;
+}
+
+.nav-links li {
+	display: inline;
+}
+
+.nav-links a {
+	color: white;
+	text-decoration: none;
+	font-size: 18px;
+	transition: 0.3s;
+}
+
+.nav-links a:hover {
+	color: #5555FF;
+}
+
+/* ヒーローセクション */
+.hero {
+	padding: 100px 20px;
+}
+
+.hero h2 {
+	font-size: 36px;
+	margin-bottom: 10px;
+}
+
+.hero p {
+	font-size: 18px;
+	opacity: 0.8;
+}
+
+/* ボタンの基本デザイン */
+.dynamic-btn {
+	position: relative;
+	padding: 12px 30px;
+	font-size: 18px;
+	font-weight: bold;
+	color: white;
+	background: linear-gradient(90deg, #7289da, #BA55D3);
+	border: none;
+	border-radius: 8px;
+	cursor: pointer;
+	overflow: hidden;
+	transition: transform 0.2s ease-in-out;
+}
+
+/* 疑似要素で左から色が流れるエフェクト */
+.dynamic-btn::before {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: -100%;
+	width: 100%;
+	height: 100%;
+	background: linear-gradient(90deg, #191970, #4B0082);
+	transition: left 0.3s ease-in-out;
+}
+
+/* ホバー時のエフェクト */
+.dynamic-btn:hover::before {
+	left: 0; /* 左からスライド */
+}
+
+/* ホバー時にボタンを1.05倍に拡大 */
+.dynamic-btn:hover {
+	transform: scale(1.05);
+}
+
+/* 疑似要素をボタンの背景として適用 */
+.dynamic-btn::before {
+	z-index: -1;
+}
+
+/* テキストを前面に出す */
+.dynamic-btn {
+	position: relative;
+	z-index: 1;
+}
+
+/* ウィジェットセクション */
+.widgets {
+	background: linear-gradient(90deg, #7289da, #BA55D3);
+	display: flex;
+	justify-content: center;
+	gap: 20px;
+	margin-top: 40vh;
+	padding: 20px;
+	max-width: 300vh;
+	height: 400px;
+	margin-bottom: 0px;
+}
+
+/* ウィジェット */
+.widget1 {
+	background: rgba(255, 255, 255, 0.1); 
+	backdrop-filter: blur(10px);
+	position: relative;
+	top: 100px;
+	padding: 20px;
+	width: 280px;
+	height: 180px;
+	border-radius: 10px;
+	text-align: center;
+	transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* .widget2 {
+	background: rgba(255, 255, 255, 0.1);
+	backdrop-filter: blur(10px);
+	position: relative;
+	top: 75px;
+	padding: 20px;
+	width: 280px;
+	height: 180px;
+	border-radius: 10px;
+	text-align: center;
+	transition: transform 0.3s ease, box-shadow 0.3s ease;
+} */
+
+/* カーソルを合わせたときのエフェクト */
+.widget1:hover,.widget2:hover {
+	transform: scale(1.05);
+	box-shadow: 0px 10px 20px rgba(255, 255, 255, 0.2);
+}
+
+.widget1,.widget2 h3 {
+	transition: 0.3s;
+}
+
+.widget1:hover,.widget2:hover h3 {
+	color: #5555FF;
+}
+
+/* ウィジェットのタイトル */
+.widget1,.widget2 h3 {
+	font-size: 22px;
+	margin-bottom: 10px;
+}
+
+/* ウィジェットの説明 */
+.widget1,.widget2 p {
+	font-size: 16px;
+	opacity: 0.8;
+}
+
+.sanka {
+	background: rgba(0, 0, 0, 0.2);
+	backdrop-filter: blur(10px);
+	padding: 20px;
+	height: 250px;
+}
+
+/* フーター */
+footer {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 15px 20px;
+	background: linear-gradient(90deg, #191970, #4B0082);
+}
